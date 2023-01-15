@@ -5,13 +5,9 @@ function createDOM(node) {
 
   const element = document.createElement(node.tag);
 
-  // node.children.map(createDOM).forEach(element.appendChild.bind(element));
-
-  console.log("nodes");
-  console.log(node.children.map(createDOM));
-  console.log("element");
-  console.log(element);
-  
+  node.children.map(createDOM).forEach(element.appendChild.bind(element));
+  //1. node.children.map(createDOM).forEach(i => element.appendChild(i)); 
+  //2. node.children.map(createDOM).forEach(element.appendChild); //element의 context를 갖고있지 못함.
 
   return element;
 }
