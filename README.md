@@ -9,4 +9,4 @@
 
 
 ## 📌 프로젝트 개발 환경
-  ![Generic badge](https://img.shields.io/badge/nodejs-v12.18.2-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v6.14.5-blue.svg)   
+  ![Generic badge](https://img.shields.io/badge/nodejs-v18.13.0-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v8.19.3-blue.svg)   
