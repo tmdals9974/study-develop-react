@@ -13,6 +13,7 @@ export function createDOM(node) {
 }
 
 export function createElement(tag, props, ...children) {
+  props = props || {};
   return {
     tag,
     props,
