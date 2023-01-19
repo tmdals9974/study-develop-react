@@ -53,3 +53,17 @@ export function createElement(tag, props, ...children) {
 export function render(vdom, container) {
   container.appendChild(createDOM(vdom));
 }
+
+export const render2 = (function () {
+  let prevDom = null;
+
+  return function (vdom, container) {
+    if (prevDom === null) {
+      prevDom = vdom;
+    }
+
+    // prevDom과 vdom을 비교하여 변경된 부분만 DOM Update 수행 로직 작성 부분
+
+    container.appendChild(updateDOM(vdom));
+  };
+})();
