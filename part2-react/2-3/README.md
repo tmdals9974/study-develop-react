@@ -86,3 +86,9 @@ const vdom = createElement(
 
 - rerender 할 경우, 이전 DOM과 새로운 DOM을 비교하여 바뀐 부분만 업데이트 하는 것 보다 render 메소드에서 이전 객체와 새로운 객체를 비교하는 것이 훨씬 효율적임.
 - 가상 DOM을 만들고, Real DOM과 비교하여 변경된 부분만 업데이트하는 개념이 Virtual DOM임.
+
+# 2.9 Hook
+
+- Hook은 리액트에서 함수가 상태를 가질 수 있도록 제공해주는 기능이다.
+- createElement 함수를 통해서 만들어지는 객체들은 트리구조이며 순서대로 호출됨. `순서가 보장되기 때문에 배열과 인덱스를 통해서 상태를 저장`하고 관리할 수 있게 해줌.
+- classComponent의 경우에는 createElement 함수 내에서 rerender 시 별도 분기를 타기 때문에 hook을 이용할 수 없음.

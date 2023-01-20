@@ -1,3 +1,6 @@
+const hooks = [];
+let currentComponent = 0;
+
 export class Component {
   constructor(props) {
     this.props = props;
@@ -25,6 +28,23 @@ function makeProps(props, children) {
   };
 }
 
+/**
+ * ? 예시용 미사용 함수. 
+ * * Hook의 구현 방식을 설명. 자세한 내용은 README를 참조. 
+ */
+function useState(initValue) {
+  let position = currentComponent - 1;
+  if (!hooks[position]) {
+    hooks[position] = initValue;
+  }
+
+  const modifier = (nextValue) => {
+    hooks[position] = nextValue;
+  };
+
+  return [hooks[position], modifier];
+}
+
 export function createElement(tag, props, ...children) {
   props = props || {};
 
@@ -38,22 +58,29 @@ export function createElement(tag, props, ...children) {
       */
       const instance = new tag(makeProps(props, children));
       return instance.render();
-    } else {
-      if (children.length > 0) {
-        return tag(makeProps(props, children));
-      } else {
-        return tag();
-      }
     }
-  } else {
-    return { tag, props, children };
+
+    hooks[currentComponent] = null;
+    currentComponent++;
+
+    if (children.length > 0) {
+      return tag(makeProps(props, children));
+    } else {
+      return tag(props);
+    }
   }
+
+  return { tag, props, children };
 }
 
 export function render(vdom, container) {
   container.appendChild(createDOM(vdom));
 }
 
+/**
+ * ? 예시용 미사용 함수. 
+ * * Hook의 구현 방식을 설명. 자세한 내용은 README를 참조. 
+ */
 export const render2 = (function () {
   let prevDom = null;
 
