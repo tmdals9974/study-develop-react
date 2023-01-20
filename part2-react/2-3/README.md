@@ -92,3 +92,10 @@ const vdom = createElement(
 - Hook은 리액트에서 함수가 상태를 가질 수 있도록 제공해주는 기능이다.
 - createElement 함수를 통해서 만들어지는 객체들은 트리구조이며 순서대로 호출됨. `순서가 보장되기 때문에 배열과 인덱스를 통해서 상태를 저장`하고 관리할 수 있게 해줌.
 - classComponent의 경우에는 createElement 함수 내에서 rerender 시 별도 분기를 타기 때문에 hook을 이용할 수 없음.
+
+# 2.10 사이드이펙트
+
+- React가 프론트엔드 업계에 큰 사이드이펙트를 발생시킴.
+- `Virtual DOM` (변환기를 이용해 객체를 화면 전환) 이라는 개념은 React Native와 같이 `모바일`이나 Next.js와 같이 `서버사이드 렌더링` 방식도 지원 가능하도록 만듬.
+- React가 제공하는 기능은 많지 않기에 개발자의 역량에 많이 좌우됨.
+- React가 제시하는 Component의 스펙이 단촐하기에, 타 플랫폼의 Component에 비해 재사용성이 많이 떨어져 그에 대한 연구가 많음 (ex: Atomic Design Pattern)
