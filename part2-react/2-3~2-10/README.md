@@ -1,3 +1,5 @@
+> node version 18.13.0
+
 # 2.3 setup webpack & babel
 
 - babel과 webpack을 설치하여 번들링/트랜스파일러 기능 지원.
