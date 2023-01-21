@@ -9,4 +9,5 @@
 
 
 ## 📌 프로젝트 개발 환경
-  ![Generic badge](https://img.shields.io/badge/nodejs-v18.13.0-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v8.19.3-blue.svg)   
+  ![Generic badge](https://img.shields.io/badge/nodejs-v12.18.2-blue.svg) ![Generic badge](https://img.shields.io/badge/npm-v8.19.3-blue.svg)
+  > 2-3 ~ 2-10강의 경우 node v18.13.0을 사용하였습니다.
